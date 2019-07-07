@@ -52,6 +52,9 @@ You will need to create a new set of access keys, as the root IDs cannot show th
 ![args_attention](/res/args_attention.PNG)
 ![n_arg](/res/n_arg.PNG)
 ![m_arg](/res/m_arg.PNG)
+Running the command should give you a similar output:
+![CA endpoint](/res/ca_endpoint.PNG)
+Pay close attention to the box in blue when following the instructions.
 5. Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-client.html)
 ### Step four: Enroll the Member Admin
 * Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-enroll-admin.html)
