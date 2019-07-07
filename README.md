@@ -36,14 +36,23 @@
 2. In the EC2 AWS interface with all your instances, connect to your EC2 instance by clicking on "Connect" and selecting "EC2 instance connect."
 ![EC2 connect](/res/EC2_connect.PNG)
 ![EC2 SSH](/res/EC2_SSH.PNG)
-3. First, `awscli` needs to be updated. If you do not have awscli to the latest version, you wont be able to run some commands that interact with the blockchain. Run the following:
+3. `awscli` needs to be updated. If you do not have awscli to the latest version, you wont be able to run some commands that interact with the blockchain. Run the following:
 * ``sudo yum install python2-pip``
 * ``sudo pip install awscli --upgrade``
+`awscli` must also be configured. This uses your AWS security credentials found in the following page:
+![AWS security](access_keys.PNG)
+You will need to create a new set of access keys, as the root IDs cannot show their secret key. This can be done by clicking on "Create New Access Key." Run the following command:
+``aws configure``
+* The first two prompts will ask for your ID and your secret key
+* The third will ask for your region, `us-east-1` will do the job
+* The fourth will ask for your default output format, `json` is what we want
+* When done, your command prompt should look like this:
+![aws configure](aws_configure.PNG)
 4. Do not do run this command yet, but do pay close attention when you get to it, as the arguments in red have to be replaced with the ones in your Amazon Managed Blockchain dashboard:
 ![args_attention](/res/args_attention.PNG)
 ![n_arg](/res/n_arg.PNG)
 ![m_arg](/res/m_arg.PNG)
-4. Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-client.html)
+5. Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-client.html)
 ### Step four: Enroll the Member Admin
 * Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-enroll-admin.html)
 
