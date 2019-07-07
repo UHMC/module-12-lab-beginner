@@ -40,14 +40,14 @@
 * ``sudo yum install python2-pip``
 * ``sudo pip install awscli --upgrade``
 `awscli` must also be configured. This uses your AWS security credentials found in the following page:
-![AWS security](access_keys.PNG)
+![AWS security](/res/access_keys.PNG)
 You will need to create a new set of access keys, as the root IDs cannot show their secret key. This can be done by clicking on "Create New Access Key." Run the following command:
 ``aws configure``
 * The first two prompts will ask for your ID and your secret key
 * The third will ask for your region, `us-east-1` will do the job
 * The fourth will ask for your default output format, `json` is what we want
 * When done, your command prompt should look like this:
-![aws configure](aws_configure.PNG)
+![aws configure](/res/aws_configure.PNG)
 4. Do not do run this command yet, but do pay close attention when you get to it, as the arguments in red have to be replaced with the ones in your Amazon Managed Blockchain dashboard:
 ![args_attention](/res/args_attention.PNG)
 ![n_arg](/res/n_arg.PNG)
