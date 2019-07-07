@@ -22,7 +22,7 @@
 ## Assignment Instructions
 ### Create an AWS account for cloud services
 1. First, you must create an AWS account in order to use Amazon Managed Blockchain and other services. [You can make an account here.](https://aws.amazon.com/resources/create-account/)
-### Creating a Hyperledger Fabric blockchain
+
 ### Step one: Create the Network and First Member
 * Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-network.html)
 * This step will create the Network and populate it with the first member. A blockchain network is deleted once all members leave the network.
@@ -32,10 +32,11 @@
 * A VPC endpoint is necessary to allow an Amazon EC2 instance to be used as a Hyperledger Fabric client to interact with Hyperledger Fabric endpoints that Amazon Managed Blockchain exposes for your member and network resources. 
 
 ### Step three: Create an Amazon EC2 Instance and Set Up the Hyperledger Fabric Client
-1. First, create a new instance of Amazon EC2 with the same VPC and security groups as the VPC endpoint created in step two.
-
-_to be populated_
-
+1. Create a new instance of Amazon EC2 with the same VPC and security groups as the VPC endpoint created in step two. An additional inbound rule must be added for SSH access on port 22. [See the following document on how to create an Amazon EC2 instance](https://docs.aws.amazon.com/efs/latest/ug/gs-step-one-create-ec2-resources.html)
+2. In the EC2 AWS interface with all your instances, connect to your EC2 instance by clicking on "Connect" and selecting "EC2 instance connect."
+![EC2 connect](EC2_connect.PNG)
+![EC2 SSH](EC2_SSH.PNG)
+3. 
 ### Step four: Enroll the Member Admin
 * Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-enroll-admin.html)
 
