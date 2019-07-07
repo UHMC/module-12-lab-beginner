@@ -34,8 +34,8 @@
 ### Step three: Create an Amazon EC2 Instance and Set Up the Hyperledger Fabric Client
 1. Create a new instance of Amazon EC2 with the same VPC and security groups as the VPC endpoint created in step two. An additional inbound rule must be added for SSH access on port 22. [See the following document on how to create an Amazon EC2 instance](https://docs.aws.amazon.com/efs/latest/ug/gs-step-one-create-ec2-resources.html)
 2. In the EC2 AWS interface with all your instances, connect to your EC2 instance by clicking on "Connect" and selecting "EC2 instance connect."
-![EC2 connect](EC2_connect.PNG)
-![EC2 SSH](EC2_SSH.PNG)
+![EC2 connect](/res/EC2_connect.PNG)
+![EC2 SSH](/res/EC2_SSH.PNG)
 3. 
 ### Step four: Enroll the Member Admin
 * Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-enroll-admin.html)
