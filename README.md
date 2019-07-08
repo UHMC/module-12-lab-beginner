@@ -39,6 +39,7 @@
 3. `awscli` needs to be updated. If you do not have awscli to the latest version, you wont be able to run some commands that interact with the blockchain. Run the following:
 * ``sudo yum install python2-pip``
 * ``sudo pip install awscli --upgrade``
+
 `awscli` must also be configured. This uses your AWS security credentials found in the following page:
 ![AWS security](/res/access_keys.PNG)
 You will need to create a new set of access keys, as the root IDs cannot show their secret key. This can be done by clicking on "Create New Access Key." Run the following command:
@@ -48,7 +49,7 @@ You will need to create a new set of access keys, as the root IDs cannot show th
 * The fourth will ask for your default output format, `json` is what we want
 * When done, your command prompt should look like this:
 ![aws configure](/res/aws_configure.PNG)
-4. Do not do run this command yet, but do pay close attention when you get to it, as the arguments in red have to be replaced with the ones in your Amazon Managed Blockchain dashboard:
+4. *THIS IS NOT A STEP! IT'S FOR INFORMATION ONLY* Do not do run this command yet, but do pay close attention when you get to it, as the arguments in red have to be replaced with the ones in your Amazon Managed Blockchain dashboard:
 ![args_attention](/res/args_attention.PNG)
 ![n_arg](/res/n_arg.PNG)
 ![m_arg](/res/m_arg.PNG)
@@ -58,13 +59,17 @@ Pay close attention to the box in blue when following the instructions.
 5. Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-client.html)
 ### Step four: Enroll the Member Admin
 * Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-enroll-admin.html)
-
+* When typing directory paths, be sure that the path is full and that there are no relative paths. Some commands will not work with relative paths.
+* If you have any special characters in your password, when executing any command that requires a password to be typed in, make sure to wrap the password 'like this'
 ### Step five: Create a Peer Node
 * Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-peer-node.html)
+* Your member's peer nodes interact with other members' peer nodes on the blockchain to query and update the ledger, and store a local copy of the ledger.
 
 ### Step six: Create a Channel
+* Before you begin run the following command:
+`` wget https://raw.githubusercontent.com/UHMC/module-12-lab-beginner/master/configtx.yaml``
+	* The configtx.yaml file that docker reads is sensitive to whitespaces and other formatting changes. Pasting the configuration onto a new file might throw errors. This repository has that boilerplate configuration file formatted properly for your convenience. All that's left to do is edit it as the tutorial states.
 * Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-channel.html)
-
 ### Step seven: Run Chaincode
 * Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-chaincode.html)
 
