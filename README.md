@@ -29,7 +29,7 @@
 
 ### Step two: Create an Endpoint
 * Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-endpoint.html)
-* A VPC endpoint is necessary to allow an Amazon EC2 instance to be used as a Hyperledger Fabric client to interact with Hyperledger Fabric endpoints that Amazon Managed Blockchain exposes for your member and network resources. 
+* Now that the network is up and running in your VPC, you set up an interface VPC endpoint (AWS PrivateLink) for your member. This allows the Amazon EC2 instance that you use as a Hyperledger Fabric client to interact with the Hyperledger Fabric endpoints that Amazon Managed Blockchain exposes for your member and network resources.  
 
 ### Step three: Create an Amazon EC2 Instance and Set Up the Hyperledger Fabric Client
 1. Create a new instance of Amazon EC2 with the same VPC and security groups as the VPC endpoint created in step two. An additional inbound rule must be added for SSH access on port 22. [See the following document on how to create an Amazon EC2 instance](https://docs.aws.amazon.com/efs/latest/ug/gs-step-one-create-ec2-resources.html)
