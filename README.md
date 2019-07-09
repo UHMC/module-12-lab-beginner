@@ -57,24 +57,29 @@ Running the command should give you a similar output:
 ![CA endpoint](/res/ca_endpoint.PNG)
 Pay close attention to the box in blue when following the instructions.
 5. Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-client.html)
+
 ### Step four: Enroll the Member Admin
-* Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-enroll-admin.html)
 * When typing directory paths, be sure that the path is full and that there are no relative paths. Some commands will not work with relative paths.
 * If you have any special characters in your password, when executing any command that requires a password to be typed in, make sure to wrap the password 'like this'
+* Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-enroll-admin.html)
+
 ### Step five: Create a Peer Node
-* Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-peer-node.html)
 * Your member's peer nodes interact with other members' peer nodes on the blockchain to query and update the ledger, and store a local copy of the ledger.
+* Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-peer-node.html)
 
 ### Step six: Create a Channel
 * Before you begin run the following command:
 `` wget https://raw.githubusercontent.com/UHMC/module-12-lab-beginner/master/configtx.yaml``
 	* The configtx.yaml file that docker reads is sensitive to whitespaces and other formatting changes. Pasting the configuration onto a new file might throw errors. This repository has that boilerplate configuration file formatted properly for your convenience. All that's left to do is edit it as the tutorial states.
+* When adding the `PEER` variable to your `.bash_profile` make sure that you are copying the peer endpoint and NOT the peer event endpoint:
+![peer endpoint](/res/peer_endpoint.PNG)
 * Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-create-channel.html)
 ### Step seven: Run Chaincode
+* This is where you actually execute code on the blockchain. 
 * Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-chaincode.html)
 
 ### Step eight: Invite a Member and Create a Joint Channel
-* Follow [these instructions](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-joint-channel.html)
+* [This step is not necessary for the purposes of this tutorial, but on a production system, adding other AWS members to a channel is important](https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/get-started-joint-channel.html)
 
 
 ## Credits
