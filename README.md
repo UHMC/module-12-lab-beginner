@@ -19,7 +19,7 @@
 * Amazon EC2 virtual machine - Amazon Linux EC2 virtual machine
 * Amazon VPC - Virtual Private Cloud to link the EC2 client with the Hyperledger Fabric blockchain
 
-## Assignment Instructions
+## Assignment Instructions (2.5 - 3 Hours)
 ### Create an AWS account for cloud services
 1. First, you must create an AWS account in order to use Amazon Managed Blockchain and other services. [You can make an account here.](https://aws.amazon.com/resources/create-account/)
 
